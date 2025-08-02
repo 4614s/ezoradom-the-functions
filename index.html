@@ -1,7 +1,107 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
-  <body>
-    Bu bir demo
-  </body>
+ <head>
+  <script src="https://cdn.jsdelivr.net/gh/4614s/EzoraDOM-the-functions/CDN/i.js"></script> 
+  <script src="https://ezora.pages.dev/unavaible-files/cdntags.js"></script>
+  <script src="https://ezora.pages.dev/unavaible-files/footer.js"></script>
+ </head>
+ <body></body>
+ <script> 
+  //Head
+  ez.pageCharset('UTF-8');
+  ez.createMetaElement('viewport','width=device-width, initial-scale=1.0');
+  ez.createMetaElement('description',`
+   EzoraDOM the functions: Fonksiyonlar ile DOM kodları ve daha fazlasını yazmanızı sağlayan bir Javascript kütüphanesidir. 
+  `);
+  ez.pageTitle('EzoraDOM: Fonksiyonlar ile HTML sayfanıza hükmedin!');
+  //Body
+  ez.createElement('div',`
+   <img src="https://4614s.github.io/ezoradom-the-functions/photos/ezoradomlogo1.jpg" alt="EzoraDOM logo" id="logo1">
+  `,'div1',0);
+  ez.createElement('h2',`Fonksiyonlar ile HTML sayfanıza hükmedin!`,0,'text-center');
+ ez.createElement('p',`EzoraDOM fonksiyonlar ile DOM (Document object model) kodları ve daha fazlasını yazmanızı sağlayan bir Javascript kütüphanesidir. Kütüphanenin tam ismi EzoraDOM the functions'dır. <br>
+   <br>
+   <b>EzoraDOM ile:</b>
+   <ul style="text-align: left;list-style: none;">
+    <li>Sayfadaki bir yazının içeriği değiştirilebilir.</li>
+    <li>Sayfadaki bir bölümün html içeriği değiştirilebilir.</li>
+    <li>Element oluşturulabilir.</li>
+    <li>Sayfadaki element silinebilir.</li>
+    <li>Sayfadaki istenilen bir elemente event atanabilir.</li>
+    <li>Sayfadaki istenilen elementin eventı silinebilir.</li>
+    <li>Sayfadaki istenilen elemente/elementlere stil atanabilir</li>
+    <li>Veri depolanabilir/silinebilir/okunabilir (Lokal)</li>
+    <li>Sayfa başlığı, sayfa karakter seti gibi head içeriklerinede girilebilir.</li>
+    <li>Meta Element oluşturulabilir.</li>
+    <li>EzoraDOM asetler ile tek satırda güçlü uygulamalar oluşturulabilir. Örnek ez.createLiveClock(4,0,0); 40px boyutunda canlı saat oluşturur. </li>
+   </ul>`,0,'text-center');
+   ez.createElement('div',`<b>Bu sayfa EzoraDOM ile yazılmıştır. Bakmak isterseniz =></b> <a href="https://github.com/4614s/ezoradom-the-functions/tree/main/index.html" style="color:blue;">github.com/4614s/EzoraDOM-the-functions/index.html?code=inspect</a>`,0,'text-center');
+   ez.createElement('h2',`EzoraDOM'u sayfaya dahil etme`,0,'text-center');
+   ez.createElement('p',`i.js dinamiktir. EzoraDOM güncellendiğinde oda güncellenir. Kod aşağıda kopyalamak için koda tıklayın.`,0,'text-center');
+   ez.createButton(cdnIjs,`
+   navigator.clipboard.writeText(cdnIjs)
+  .then(() => {
+    alert("Kopyalandı!");
+  })
+  .catch(err => {
+    alert("Kopyalanamadı");
+   });
+   `,0,'code');
+ 
+  ez.createElement('p',`
+   v1 Şuanlık en güncel EzoraDOM sürümüdür. Kod aşağıda kopyalamak için koda tıklayın.
+  `,0,'text-center');
+ ez.createButton(cdnv1js,`
+   navigator.clipboard.writeText(cdnv1js)
+  .then(() => {
+    alert("Kopyalandı!");
+  })
+  .catch(err => {
+    alert("Kopyalanamadı");
+   });
+   `,0,'code');
+   
+   ez.createElement('footer',0,0,'ezs-footer');
+   
+  //Stylesheets
+  ez.setStyleByTagName("body",'background','#1B0E3D');
+  ez.setStyleByTagName("body",'color','white');
+  ez.setStyleByTagName('body','fontFamily','sans-serif');
+  ez.setStyleById('logo1','width','360px');
+  ez.setStyleById('logo1','filter','brightness(0.93)');
+  ez.setStyleById('logo1','height','200px'); 
+ ez.setStyleById('div1','display','flex'); 
+ ez.setStyleById('div1','justifyContent','center');
+ ez.setStyleByClassName('text-center','textAlign','center','all');
+
+ ez.setStyleByTagName('h2','font-size','1.8rem','f');
+ ez.setStyleByTagName('li','margin-block','8px','all');
+ ez.setStyleByTagName('footer','padding','20px');
+ ez.createElement('style',`
+   ::selection {
+     background: darkblue;
+     color: white;
+   }
+   
+   li::before {
+     content: "– ";
+   }
+   
+   .code {
+     background: #333;
+     color: green;
+     margin: 0 auto;
+     padding: 12px;
+     border-radius: 5px;
+     display: block;
+     max-width: 90vw;
+     border: 1px solid black;
+     word-break: break-word;
+     overflow-wrap: break-word;
+     cursor: pointer;
+     margin-bottom: 32px;
+     font-weight: 600;
+   }
+ `,0,0,'head');
+ </script>
 </html>
