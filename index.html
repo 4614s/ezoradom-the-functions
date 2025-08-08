@@ -49,8 +49,10 @@
    });
    `,0,'code');
  
-  ez.createLinkElement("Daha fazla bilgi için tıkla","/docs/cdn",0,"text-center");
-   
+  ez.createElement("div",`<a href="/docs/cdn"
+  style="display:block;margin: 0 auto;"
+  >Daha fazla bilgi için tıkla</a>
+  `,0,0);
   ez.createElement('footer',0,0,'ezs-footer');
    
   //Styles 
@@ -61,13 +63,13 @@
   ez.setStyleById('logo1','filter','brightness(0.93)');
   ez.setStyleById('logo1','height','200px'); 
   ez.setStyleById('div1','display','flex'); 
- ez.setStyleById('div1','justifyContent','center');
- ez.setStyleByClassName('text-center','textAlign','center','all');
+  ez.setStyleById('div1','justifyContent','center');
+  ez.setStyleByClassName('text-center','textAlign','center','all');
 
- ez.setStyleByTagName('h2','font-size','1.8rem','f');
- ez.setStyleByTagName('li','margin-block','8px','all');
- ez.setStyleByTagName('footer','padding','20px');
- ez.createElement('style',`
+  ez.setStyleByTagName('h2','font-size','1.8rem','f');
+  ez.setStyleByTagName('li','margin-block','8px','all');
+  ez.setStyleByTagName('footer','padding','20px');
+  ez.createElement('style',`
  /*
    Vanilla CSS ama EzoraDOM içinde :)
  */
