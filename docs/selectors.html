@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ezora.pages.dev/unavaible-files/footer.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="nav.js"></script>
+  <title>EzoraDOM dökümantasyonu 2- Seçiciler</title>
+</head>
+<body>
+  <nav></nav>
+  <br><br>
+  <h2>EzoraDOM dökümantasyonu 2: Seçiciler</h2>
+  <p>EzoraDOM'da seçiciler fonksiyon ismindedir. Bu durum sizi şaşırtmasın şimdi anlayacaksınız.</p>
+  <div class="code">
+    <span class="gray">// EzoraDOM ile</span> <br>
+    <span class="lightblue">ez</span>.replaceTextById(<span class="orange">id</span>, <span class="orange">Yeni yazı</span>); <br>
+    <br>
+    <span class="gray">// Klasik JS DOM ile</span> <br>
+    <span class="lightblue">document</span>.getElementById(<span class="orange">id</span>).innerText = <span class="orange">Yeni yazı</span>; <br>
+    <br>
+    <span class="gray">// Yukardaki kodlar aynı işlevdedir.</span>
+  </div>
+  <br>
+  <p>EzoraDOM'da 4 ana seçici vardır.
+  <ul style="text-align:left;">
+    <li>ById seçicisi</li>
+    <li>ByClassName seçicisi</li>
+    <li>ByTagName seçicisi</li>
+    <li>ByQuerySelector seçicisi</li>
+  </ul>
+  Bunlardan Id dışındaki hepsi hem tekli hemde çoklu seçim yapabililir
+  </p> 
+  <br>
+  <h3>Nasıl hem tekli hemde çoklu seçim yapabiliyor bu seçiciler? (id seçicisi hariç)</h3>
+  <p>Id seçicisi hariç tüm seçiciler fonksiyon içerisinde seçim parametrrsine sahiptir bu kuralı çiğneyen bir fonksiyon bile yok. Şimdi görelim bu parametre nasıl kullanılıyormuş?</p> <br><br>
+  <h4>1. Durum: Seçim değeri girilmemişse veya "f" girilmişse</h4>
+  <p>Seçim parametresindeki değer girilmemişse veya "f" girilmişse. İlk elementi seçer.</p>
+  <div class="code">
+    <span class="lightblue">ez</span>.replaceTextByTagName(<span class="orange">"p"</span>, <span class="orange">"Değişen yazı"</span>, <span class="orange">"f"</span>);
+    <br><br>
+   <span class="lightblue">ez</span>.replaceTextByTagName(<span class="orange">"p"</span>, <span class="orange">"Değişen yazı"</span>);
+   <br><br>
+   <span class="gray">/* <br>
+   İkiside ilk "p" etiketini seçer ve yazısını "Değişen yazı" yapar. (TagName seçicisi örnektir. Id hariç her seçicidede çalışır.)
+   <br><br>
+   Neden "f" derseniz İngilizcede ilk anlamına gelen firstten geliyor.
+   <br>
+   */</span>
+  </div>
+  <br><br>
+  <h4>2. Durum: İndex numarasına göre seçim yapılmak istenirse</h4>
+  <p>İndex numarasına göre seçim yapılmak istenirse seçim parametresine 0 hariç seçmek istenilen index numarasını giriniz. Neden 0 hariç diye sorarsanız o konu biraz karışık ama "f" var.
+  <span style="font-weight: 800;color: #ff7f7f;">Uyarı: indexe göre seçim yapacağınız parametrenin değerinin türü Number olmalı. Aksi taktirde seçim hatalı çıkar.</span>
+  </p>
+  <div class="code">
+    <span class="lightblue">ez</span>.replaceTextByTagName(<span class="orange">"p"</span>, <span class="orange">"Değişen yazı"</span>, <span class="lightgreen">2</span>);
+   <br>
+   <br>
+   <span class="gray">/* <br>
+    İndex numarası 2 olan "p" etiketini seçer ve yazısını "Değişen yazı" yapar. (TagName seçicisi örnektir. Id hariç her seçicidede çalışır.)
+   <br>
+   */</span>
+  </div> 
+  <br><br>
+  <h4>Durum 3: Tümü seçilmek istenirse</h4>
+  <p>Seçicinin seçtiği tüm seçilenler seçilmek istenirse seçim parametresine "all" girilir.</p>
+  <div class="code">
+   <span class="lightblue">ez</span>.replaceTextByTagName(<span class="orange">"p"</span>, <span class="orange">"Değişen yazı"</span>, <span class="orange">"all"</span>); 
+   <br><br>
+   <span class="gray">
+     /* <br>
+     Tüm "p" etiketlerinin yazısını "Değişen yazı" yapar. (TagName seçicisi örnektir. Id hariç her seçicidede çalışır.) <br>
+     */
+   </span>
+  </div>
+  <br><br>
+  <p>Bu arada seçici içeren fonksiyonlara örnekler verelim şuanlık ne yaptığını bilmenize gerek yok varlığından haberiniz olsun yeter.</p>
+  <div class="code">
+    <span class="lightblue">ez</span>.setStyleById(); <br> <br>
+  
+    <span class="lightblue">ez</span>.removeElementByClassName(); <br>
+  <br>
+    <span class="lightblue">ez</span>.addEventByTagName(); <br>
+  </div>
+  <br>
+  <footer class="ezs-footer"></footer>
+</body>
+</html>
