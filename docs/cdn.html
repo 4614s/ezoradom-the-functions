@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script src="https://ezoradom.js.org/CDN/i.js"></script>
+  <script src="https://ezora.pages.dev/unavaible-files/cdntags.js"></script>
+  <script src="https://ezora.pages.dev/unavaible-files/footer.js"></script>
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    ez.createElement("style",`
+    .code {
+     background: #333;
+     color: green;
+     margin: 0 auto;
+     padding: 12px;
+     border-radius: 5px;
+     display: block;
+     max-width: 90vw;
+     border: 1px solid black;
+     word-break: break-word;
+     overflow-wrap: break-word;
+     cursor: pointer;
+     margin-bottom: 32px;
+     font-weight: 600;
+     text-align: center;
+    }
+    `,0,0,'head');
+    ez.createMetaElement("viewport","width=device-width, initial-scale=1.0");
+    ez.pageCharset("UTF-8");
+    ez.pageTitle("EzoraDOM dökümantasyonu: 0- CDN ");
+  </script>
+ </head>
+ <body>
+  <h2>
+    EzoraDOM Dökümantasyonu: 0-
+   EzoraDOM'u CDN ile dahil etme
+  </h2>
+  <p>
+    EzoraDOM CDN üzerinden dahil edilir. Aşağıdan bir tane CDN scripti seçin ve kopyaladığınız kodu head etiketinin içerisine koyun. Korkmayın hata vermez.
+  </p>
+  <br>
+  <p>
+    i.js dinamiktir. EzoraDOM güncellendiğinde oda güncellenir. Kod aşağıda kopyalamak için koda tıklayın.
+  </p>
+  <button class="code" onclick="copyIjs()" id="iJsCode"></button>
+  <br>
+  <p>
+    v1 Şuanlık en güncel EzoraDOM sürümüdür. Kod aşağıda kopyalamak için koda tıklayın.
+  </p>
+  <button class="code" onclick="copyV1js()" id="v1JsCode"></button> 
+  <br>
+  <script>
+    function copyIjs(){
+      navigator.clipboard.writeText(cdnIjs)
+     .then(() => {
+       alert("Kopyalandı!");
+     })
+     .catch(() => {
+       alert("Kopyalanamadı");
+     });
+    }
+    
+    function copyV1js(){
+      navigator.clipboard.writeText(cdnv1js)
+      .then(() => {
+       alert("Kopyalandı!");
+      })
+      .catch(() => {
+       alert("Kopyalanamadı");
+      });
+    }
+    
+    document.querySelector("#iJsCode").textContent = cdnIjs;
+    document.querySelector("#v1JsCode").textContent = cdnv1js;
+  </script>
+  <br>
+  <footer class="ezs-footer"></footer>
+ </body>
+</html>
