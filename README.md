@@ -17,7 +17,9 @@
   <li>EzoraDOM asetler ile tek satırda güçlü uygulamalar oluşturulabilir. Örnek ez.createLiveClock(4,0,0); 40px boyutunda canlı saat oluşturur.</li>
 </ul>
 
+
+
 <p align="center">Copyright ©2025 EzoraDOM the functions – Tüm Hakları Saklıdır. Ezora'ya aittir. Başka bir isim altında kopyalanmadığı sürece özgürce kullanılabilir.
  
-<a href="https://github.com/4614s/Ezora/tree/main/LICENSE.md">Lisans: Ezora Halk Lisansı v1</a>
+<a align="center" href="https://github.com/4614s/Ezora/tree/main/LICENSE.md">Lisans: Ezora Halk Lisansı v1</a>
 </p>
