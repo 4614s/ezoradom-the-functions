@@ -20,7 +20,7 @@
    <img src="https://4614s.github.io/ezoradom-the-functions/photos/ezoradomlogo1.jpg" alt="EzoraDOM logo" id="logo1">
   `,'div1',0);
   ez.createElement('h2',`Fonksiyonlar ile HTML sayfanıza hükmedin!`,0,'text-center');
- ez.createElement('p',`EzoraDOM fonksiyonlar ile DOM (Document object model) kodları ve daha fazlasını yazmanızı sağlayan bir Javascript kütüphanesidir. Kütüphanenin tam ismi EzoraDOM the functions'dır. <br>
+  ez.createElement('p',`EzoraDOM fonksiyonlar ile DOM (Document object model) kodları ve daha fazlasını yazmanızı sağlayan bir Javascript kütüphanesidir. Kütüphanenin tam ismi EzoraDOM the functions'dır. <br>
    <br>
    <b>EzoraDOM ile:</b>
    <ul style="text-align: left;list-style: none;">
@@ -49,29 +49,18 @@
    });
    `,0,'code');
  
-  ez.createElement('p',`
-   v1 Şuanlık en güncel EzoraDOM sürümüdür. Kod aşağıda kopyalamak için koda tıklayın.
-  `,0,'text-center');
- ez.createButton(cdnv1js,`
-   navigator.clipboard.writeText(cdnv1js)
-  .then(() => {
-    alert("Kopyalandı!");
-  })
-  .catch(err => {
-    alert("Kopyalanamadı");
-   });
-   `,0,'code');
+  ez.createLinkElement("Daha fazla bilgi için tıkla","/docs/cdn",0,0);
    
-   ez.createElement('footer',0,0,'ezs-footer');
+  ez.createElement('footer',0,0,'ezs-footer');
    
-  //Stylesheets
+  //Styles 
   ez.setStyleByTagName("body",'background','#1B0E3D');
   ez.setStyleByTagName("body",'color','white');
   ez.setStyleByTagName('body','fontFamily','sans-serif');
   ez.setStyleById('logo1','width','360px');
   ez.setStyleById('logo1','filter','brightness(0.93)');
   ez.setStyleById('logo1','height','200px'); 
- ez.setStyleById('div1','display','flex'); 
+  ez.setStyleById('div1','display','flex'); 
  ez.setStyleById('div1','justifyContent','center');
  ez.setStyleByClassName('text-center','textAlign','center','all');
 
@@ -79,6 +68,9 @@
  ez.setStyleByTagName('li','margin-block','8px','all');
  ez.setStyleByTagName('footer','padding','20px');
  ez.createElement('style',`
+ /*
+   Vanilla CSS ama EzoraDOM içinde :)
+ */
    ::selection {
      background: darkblue;
      color: white;
@@ -103,6 +95,15 @@
      margin-bottom: 32px;
      font-weight: 600;
    }
+
+   a { color: lightblue; }
  `,0,0,'head');
+
+  
+  /*
+   Copyright ©2025 EzoraDOM the functions – Tüm Hakları Saklıdır. Ezora'ya aittir. Başka bir isim altında kopyalanmadığı sürece özgürce kullanılabilir. 
+  */
+
+  
  </script>
 </html>
