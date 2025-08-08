@@ -9,13 +9,14 @@ br::selection {
 }
 
 
-body {
+html, body {
   background: #1B0E3D;
   color: white;
   text-align: center;
   margin: 1.1rem;
   max-width: 100vw;
   font-family: sans-serif, arial;
+  scroll-behavior: smooth;
 }
 
 a {
