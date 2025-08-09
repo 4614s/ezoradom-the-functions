@@ -76,3 +76,9 @@ a:focus {
 .white {
   color: white;
 }
+
+.darkblue-box {
+  background: #003366;
+  padding:8px;
+  border-radius:4px; 
+}
