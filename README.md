@@ -21,9 +21,10 @@
 
 <p align="center">Copyright ©2025 EzoraDOM the functions – Tüm Hakları Saklıdır. Ezora'ya aittir. 
  Başka bir isim altında kopyalanmadığı sürece özgürce kullanılabilir.
+
+
  
 </p>
-<p align="center">
- 
+<p align="center"> 
  <a href="https://github.com/4614s/Ezora/tree/main/LICENSE.md">Lisans: Ezora Halk Lisansı v1</a>
 </p>
