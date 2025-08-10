@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ezora.pages.dev/unavaible-files/footer.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="nav.js"></script>
+  <title>EzoraDOM Dökümantasyonu 5: Element oluşturma 2</title>
+</head>
+<body>
+  <nav></nav>
+  <br><br>
+  <h2>EzoraDOM Dökümantasyonu 5: Element oluşturma Bölüm 2</h2>
+  <h3>Sayfaya video ve audio eklemek</h3>
+  <br><br>
+  <h3>Sayfaya video eklemek</h3>
+  <div class="code">
+    <span class="lightblue">ez</span>.createVideo(<span class="orange">Src</span>, <span class="orange">Poster</span>, <span class="orange">Id</span>, <span class="orange">Class ismi</span>, <span class="orange">Konum</span>, <span class="orange">Autoplay</span>, <span class="orange">Controls</span>);
+  </div>
+  <p>1. Parametre: Src yani kaynak parametresi. Girilmesi zorunludur.<br> <br>
+   2. Parametre: Poster resmi parametresi. Video kapağının kaynağı yazılır. Zorunlu değildir. <br>
+   <br>
+   Autoplay (otomatik oynatma) parametresi: Videonun otomatik oynatılacağının bilgisi verilir. 1 veya true girilirse otomatik oynatma açılır.<br><br>
+   Controls (Kontrol paneli) parametresi: Videonun kontrol panelinin görünürlük bilgisi verilir. Girilmezse veya 1 ya da true girilirse kontroller açılır.
+  </p>
+  <br><br>
+  <h3>Sayfaya audio eklemek</h3>
+  <div class="code">
+   <span class="lightblue">ez</span>.createAudio(<span class="orange">Src</span>, <span class="orange">Controls</span>, <span class="orange">Id</span>, <span class="orange">Class ismi</span>, <span class="orange">Konum</span>, <span class="orange">Autoplay</span>, <span class="orange">Volume</span>);
+  </div>
+  <p>
+   1. Parametre: Src yani kaynak parametresi. Girilmesi zorunludur.<br>
+    <br>
+  2. Parametre: Videonun kontrol panelinin görünürlük bilgisi verilir. 1 ya da true girilirse kontroller açılır.<br> <br>
+  Autoplay (otomatik oynatma) parametresi: Videonun otomatik oynatılacağının bilgisi verilir. 1 veya true girilirse otomatik oynatma açılır. <br>
+  <br>
+  Volume (ses seviyesi) parametresi: 0 ile 1 arasında değer girilmelidir. Girilmezse tarayıcı otomatik olarak 1 olarak ayarlar. Örnek 0.5 girilirse sesi %50 olarak ayarlanır.
+  </p>
+  <div style="color: red;">
+   <b>Uyarı:</b>
+   <ul style="text-align:left;">
+     <li>Poster resmi büyükse yükleme süresi uzayabilir.</li>
+     <li>Controls parametresi bazı tarayıcılarda inatçı davranabilir. </li>
+   </ul>
+  </div>
+  <br><br>
+  <footer class="ezs-footer"></footer>
+ </body>
+</html>
