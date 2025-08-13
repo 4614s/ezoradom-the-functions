@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ezoradom.js.org/CDN/v1.js"></script>
+ <script src="https://ezora.pages.dev/unavaible-files/footer.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #alan { border:2px solid gray;margin:8px;border-radius: 3px; }
+    .gizli { display: none; }
+  </style>
+  <script src="nav.js"></script>
+  <title>Canlı Saat</title>
+</head>
+<body>
+  <nav></nav>
+  <br><br>
+  <h2>EzoraDOM Dökümantasyonu - Asetler: Canlı saat</h2>
+  <div class="code">
+    <span class="lightblue">ez</span>.createLiveClock(<span class="orange">Font-size</span>, <span class="orange">Id</span>, <span class="orange">Class name</span>, <span class="orange">Konum</span>);
+  </div>
+  <p>
+    1. Parametre oluşturulacak canlı saatin font boyutunu belirtir. <br> <br>
+    Girilen değer number tipinde ise girilen değer×10px font verilir 2.5 girilirse 25px olur. <br><br>
+    Eğer değer string ise özel değer girilir hatta clamp() gibi css fonksiyonları bile girilebilir. <br>
+    <br>
+    <br>
+    Diğer Id, Class ismi ve Konum parametreleri element oluşturma bölümündeki ile aynıdır.
+  </p>
+  <br>
+  <br>
+  <h3>Örnek kod</h3>
+  <div class="code">
+    <span class="lightblue">ez</span>.createLiveClock(<span class="orange">"3rem"</span>, <span class="lightgreen">0</span>, <span class="lightgreen">0</span>, <span class="orange">"#alan"</span>);
+  </div>
+  <button onclick="document.querySelector('#saat').classList.remove('gizli');">Kodu çalıştır</button>
+  <div id="alan">
+    Alan: <br>
+    <script>
+      ez.createLiveClock('3rem', 'saat', 'gizli', '#alan');
+    </script>
+  </div>
+  <br>
+  <footer class="ezs-footer"></footer>
+</body>
+</html>
