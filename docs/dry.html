@@ -1,1 +1,53 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <script src="https://ezora.pages.dev/unavaible-files/footer.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="nav.js"></script>
+  <style>
+    .blue { font-weight: 900; }
+  </style>
+  <title>EzoraDOM dökümantasyonu 11: Tekrar fonksiyonu</title>
+</head>
+<body>
+ <nav></nav>
+ <br><br>
+ <h2>EzoraDOM dökümantasyonu 11: Tekrar fonksiyonu</h2>
+ <p>EzoraDOM'da kopyala yapıştır yapmana gerek yok. For döngüsü ile uğraşmanızada gerek yok.  Kullanabilirsinizde ama daha kolayı var</p>
+ <h3>repeat fonksiyonu</h3>
+ <div class="code">
+   <span class="lightblue">ez</span>.repeat(<span class="lightgreen">Tekrar sayısı</span>, <span class="blue">Fonksiyon</span>);
+   <br>
+ </div>
+ <h3>Örnek: 15 tane element oluşturma</h3>
+ <div class="code">
+   <span class="lightblue">ez</span>.repeat(<span class="lightgreen">15</span>, () <span class="blue">=></span>{ <br>
+   <span class="lightblue">ez</span>.createElement(<span class="orange">"p"</span>, <span class="orange">`Hello world ${<span class="lightblue">i</span>}!`</span>, <span class="lightgreen">0</span>, <span class="lightgreen">0</span>); <br>
+   <span class="lightblue">let</span> i = 1;
+   <br> i++;
+   <br> });
+ </div>
+ <br>
+ <h3>Ek bilgi: print ile printBl fonksiyonlarının 2. parametresi tekrar parametresidir.</h3>
+ <div class="code">
+   <span class="lightblue">ez</span>.print(<span class="orange">"Hello!"</span>, <span class="lightgreen">5</span>); <br>
+   <br>
+  <span class="lightblue">ez</span>.printBl(<span class="orange">"Hello!"</span>, <span class="lightgreen">5</span>);  
+ </div>
+ <br>
+ <h3>Çıktı</h3>
+ <div class="bg-white text-black" style="text-align: left;padding: 6px;">
+   Hello!Hello!Hello!Hello!Hello!
+   <div>Hello!</div>
+   <div>Hello!</div>
+   <div>Hello!</div>
+   <div>Hello!</div>
+   <div>Hello!</div>
+ </div>
+ <br>
+ <footer class="ezs-footer"></footer>
+</body>
+</html>
