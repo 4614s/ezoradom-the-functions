@@ -7,6 +7,6 @@ if(location.hostname.includes("ezoradom.js.org")){
      nav.style.background = '#1B0E3D';
      nav.style.paddingInline = '10px';
      nav.style.borderRadius = '10px';
-     nav.onclick = () => location.href='/docs/';
+     nav.onclick = () => location.href='/menu';
     });
 }
