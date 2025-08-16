@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <script src="https://ezoradom.js.org/CDN/i.js"></script>
+  <script src="https://ezoradom.js.org/CDN/v1.fast.js"></script>
   <script src="https://ezora.pages.dev/unavaible-files/cdntags.js"></script>
   <script src="https://ezora.pages.dev/unavaible-files/footer.js"></script>
   <script src="nav.js"></script>
@@ -44,37 +44,33 @@
   <p>
     i.js dinamiktir. EzoraDOM güncellendiğinde oda güncellenir. Kod aşağıda kopyalamak için koda tıklayın.
   </p>
-  <button class="code" onclick="copyIjs()" id="iJsCode"></button>
+  <button class="code" onclick="copyCode(cdnTagezoradomIjs)" id="iJsCode"></button>
   <br>
   <p>
     v1 Şuanlık en güncel EzoraDOM sürümüdür. Kod aşağıda kopyalamak için koda tıklayın.
   </p>
-  <button class="code" onclick="copyV1js()" id="v1JsCode"></button> 
+  <button class="code" onclick="copyCode(cdnTagezoradomV1js)" id="v1JsCode"></button> 
   <br>
+  <p>
+   v1.fast.js dosyası v1.js dosyasından kullanımı farksızdır. Tek farkı hızlıdır. <b>Ama şiddetle önerilir.</b>
+  </p>
+  <button class="code" onclick="copyCode(cdnTagezoradomV1fastjs)" id="v1fastJsCode"></button>
   <script>
-    function copyIjs(){
-      navigator.clipboard.writeText(cdnIjs)
+    function copyCode(cdn){
+      navigator.clipboard.writeText(cdn)
      .then(() => {
        alert("Kopyalandı!");
      })
      .catch(() => {
-       alert("Kopyalanamadı");
+       alert("Kopyalanamadı :(");
      });
     }
-    
-    function copyV1js(){
-      navigator.clipboard.writeText(cdnv1js)
-      .then(() => {
-       alert("Kopyalandı!");
-      })
-      .catch(() => {
-       alert("Kopyalanamadı");
-      });
-    }
-    
-    document.querySelector("#iJsCode").textContent = cdnIjs;
-    document.querySelector("#v1JsCode").textContent = cdnv1js;
-  </script>
+
+   document.querySelectorAll(".code")[0].textContent = cdnTagezoradomIjs;
+   document.querySelectorAll(".code")[1].textContent = cdnTagezoradomV1js;
+   document.querySelectorAll(".code")[2].textContent = cdnTagezoradomV1fastjs;
+   
+   </script>
   <br>
   <footer class="ezs-footer"></footer>
  </body>
