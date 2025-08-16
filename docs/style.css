@@ -8,6 +8,10 @@ br::selection {
   color: rgba(0,0,0,0);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #1B0E3D;
   color: white;
