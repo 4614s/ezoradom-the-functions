@@ -20,18 +20,13 @@
      overflow-wrap: break-word;
      cursor: pointer;
      font-weight: 600;
+     text-align: center;
+     margin: 0 auto;
     }
 
     p, b {
      margin-block: 40px;
-    }
-
-    @media (max-width: 641px){
-     .code {
-      margin: 0 auto;
-     }
-    }
-    `,0,0,'head');
+    }`,0,0,'head');
     ez.createMetaElement("viewport","width=device-width, initial-scale=1.0");
     ez.pageCharset("UTF-8");
     ez.pageTitle("EzoraDOM dokümantasyonu: 0- CDN ");
@@ -53,14 +48,14 @@
     i.js dinamiktir. EzoraDOM güncellendiğinde oda güncellenir. Kod aşağıda kopyalamak için koda tıklayın.
   </p>
   <button class="code" onclick="copyCode(cdnTagezoradomIjs)" id="iJsCode"></button>
- 
+  <br>
+  </br>
   <p>
    v1.1 sürümü en güncel EzoraDOM t.f. sürümüdür. Kod aşağıda kopyalamak için koda tıklayın.
   </p>
   <button class="code" onclick="copyCode(cdnTagezoradomv11js)"></button> 
   <button class="code" onclick="copyCode(cdnTagezoradomv11fastjs)"></button>
-  
-  
+  <br></br>  
   <p>
     v1 sürümü artık en günceli değil. Kod aşağıda kopyalamak için koda tıklayın.
   </p>
@@ -85,11 +80,7 @@
    btns[3].textContent = cdnTagezoradomV1js;
    btns[4].textContent = cdnTagezoradomV1fastjs;   
    
-  for(let i=1;i<btns.length;i++){
-   if(i%2 === 0){
-   btns[i].style.marginBlock = `65px`;
-   }
-  }
+  
   </script>
   <br>
   <footer class="ezs-footer"></footer>
