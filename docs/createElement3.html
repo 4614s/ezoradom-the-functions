@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <script src="https://ezora.pages.dev/unavaible-files/footer.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="nav.js"></script>
+  <title>EzoraDOM dökümantasyonu 12- Semantik element oluşturma</title>
+</head>
+<body>
+  <h2>EzoraDOM dökümantasyonu 12- Semantik element oluşturma (Element oluşturma bölüm 3)</h2>
+  <p>Semantik elementler çok önemlidir. Kodun okunabilirliğini arttırır ve sayfaya anlam katar. EzoraDOM'da da vardır. v1.1 sürümü ile geldiği için v1 sürümünde bulunmamaktadır.</p>
+  <br>
+  <h3>Paragraf:</h3>
+  <div class="code">
+    <span class="lightblue">ez</span>.createParagraph(<span class="orange">İçerik</span>, <span class="orange">Id</span>, <span class="orange">Class ismi</span>, <span class="orange">Konum</span>);
+  </div>
+  <br>
+  <h3>Hyperlink:</h3>
+  <div class="code">
+    <span class="lightblue">ez</span>.createHyperLink(<span class="orange">Yazı içeriği</span>, <span class="orange">Href</span>, <span class="orange">Id</span>, <span class="orange">Class ismi</span>, <span class="orange">Konum</span>);
+   <div class="gray">// Aslında bu createLinkElement() ile aynı işlevde ama bunu öneririz.</div>
+  </div>
+  <br>
+  <h3>Section & Article (Aside yok)</h3>
+  <div class="code">
+    <span class="lightblue">ez</span>.createSection(<span class="orange">İçerik</span>, <span class="orange">Id</span>, <span class="orange">Class ismi</span>, <span class="orange">Konum</span>); <br>
+    <br>
+    <span class="lightblue">ez</span>.createArticle(<span class="orange">İçerik</span>, <span class="orange">Id</span>, <span class="orange">Class ismi</span>, <span class="orange">Konum</span>);
+  </div>
+  <br>
+  <h3>Header & Footer (Main yok)</h3>
+  <div class="code">
+    <span class="lightblue">ez</span>.createHeader(<span class="orange">İçerik</span>, <span class="orange">Id</span>, <span class="orange">Class ismi</span>);<br>
+    <br>
+    <span class="lightblue">ez</span>.createFooter(<span class="orange">İçerik</span>, <span class="orange">Id</span>, <span class="orange">Class ismi</span>); <br>
+    <br>
+    <div class="gray">// Bunlarda konum yok çünkü bir header elementinin sayfanın sonuna yerleştirilmesi garip olurdu.</div>
+  </div>
+  <br>
+  <p>
+    Farkettiyseniz bu sayfada semantik etiketlerin anlamlarını anlatmadık. Bu sayfayı en verimli şekilde anlamak için önce <ins style="cursor:pointer" onclick="location.href='/docs/createElement1'">Element oluşturma 1. bölümü daha önceden okumuş olmanız</ins> ve HTML semantik etiketlerini bilmeniz gerekmektedir.
+  </p>
+  <br>
+  <footer class="ezs-footer"></footer>
+ </body>
+</html>
