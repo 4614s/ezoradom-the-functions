@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <script src="https://ezora.pages.dev/unavaible-files/footer.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="docs/style.css">
   <style>
@@ -9,35 +10,107 @@
      min-height: 99vh;
    }
   
-    a {
-     color: white;
-     text-decoration: none;
-     display: block;
-    }
-    
+  main {
+    margin-bottom: 2rem;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: all 0.2s;
+    padding: 2px 0;
+  }
+  
+  a:hover {
+    color: #909090; 
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: gray;
+    transform: scale(0.96);
+  }
+  
+  header {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    background: #1B0E3D;
+    padding-block: 0.5rem;
+    border-bottom: 1px solid gray;
+  }
+  
+  input {
+    background:  #2A165A;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 8px 16px;
+    width: 60vw;
+    font-size: 17px;
+    transition: background 0.5s;
+  } 
+  
+  input:focus {
+    outline: 1px solid white;
+    background: #000070;
+  }
+  
+  input::placeholder {
+    color: white;
+  }
+  
     .heading5 {
-      font-size: 18px;
+      font-size: 19px;
     }
 
     section, article {
       margin: 25px 0;
     }
+    
+  footer > a {
+    display: inline;
+  }
+  
+    @media (min-width: 700px){
+      main {
+        display: flex;
+      }
+      
+      section {
+        margin-inline: 5px;
+      }
+    }
   </style>
   <title>Navigation Menu</title>
+  <script>
+    if(navigator.language.includes("tr")){
+      document.title = `Navigasyon menüsü`;
+    }
+  </script>
 </head>
 <body style="text-align:left;">
+
+ <header>
+  <input type="text" id="searchBox" placeholder="⌕ Ara...">
+ </header>
+
+  <main>
+  <div class="left-half">
   <section id="docs">
     <h3>Dokümantasyon:</h3>
       <a href="docs/cdn">0- CDN ile dahil etme</a>
-      <a href="docs/print">01- Print fonksiyonları</a>
-      <a href="docs/selectors">02- Seçiciler</a>
-      <a href="docs/replace">03- Replace fonksiyonları</a>
-      <a href="docs/createElement1">04- Element oluşturma 1</a>
-      <a href="docs/createElement2">05- Element oluşturma 2</a>
-      <a href="docs/removeElement">06- Element silme</a>
-      <a href="docs/head">07- Head içeriği</a>
-      <a href="docs/setStyle">08- Stillendirme</a>
-      <a href="docs/events">09- Eventlar</a>
+      <a href="docs/print">1- Print fonksiyonları</a>
+      <a href="docs/selectors">2- Seçiciler</a>
+      <a href="docs/replace">3- Replace fonksiyonları</a>
+      <a href="docs/createElement1">4- Element oluşturma 1</a>
+      <a href="docs/createElement2">5- Element oluşturma 2</a>
+      <a href="docs/removeElement">6- Element silme</a>
+      <a href="docs/head">7- Head içeriği</a>
+      <a href="docs/setStyle">8- Stillendirme</a>
+      <a href="docs/events">9- Eventlar</a>
       <a href="docs/dataControl">10- Veri depolama</a>
       <a href="docs/dry">11- Kendini tekrar etme</a>
       <a href="docs/createElement3">12- Semantik element oluşturma</a>
@@ -50,10 +123,12 @@
        <a href="docs/clickCounter">— Tıklama Sayacı</a>
      </div>
   </section>
-  
+  </div>
+ 
+  <div class="right-half">
   <section id="announcements">
     <h3>Duyurular:</h3>
-    <p>Şu an mevcut bir duyuru bulunmamaktadır.</p>
+    <a>Şu an mevcut bir duyuru bulunmamaktadır.</a>
   </section>
 
  <section id="updatelogs">
@@ -65,6 +140,39 @@
    <h3>Diğer:</h3>
    <a href="/">Anasayfaya git</a>
  </section> 
-  
+</div> 
+
+</main>
+
+ <footer class="ezs-footer"></footer>
+ 
+ <script>
+   const searchBox = document.querySelector("#searchBox");
+   const links = document.querySelectorAll("main a");
+   
+   searchBox.addEventListener("input",()=>{
+     const value = searchBox.value.toLowerCase();
+     
+     document.querySelectorAll("section").forEach(sec => sec.style.display = "block");
+     
+     links.forEach(link => {
+       const text = link.textContent.toLowerCase();
+       link.style.display = text.includes(value) ? 'block' : 'none' ;
+     });
+     
+     document.querySelectorAll("section").forEach(sec =>{
+       const visible = Array.from(sec.querySelectorAll("a"))
+       .some(a => a.style.display !== 'none');
+       
+       sec.style.display = visible ? 'block' : 'none';
+     });
+     
+     if(value.length !== 0){
+       document.querySelector(".heading5").style.display = 'none';
+     } else {
+       document.querySelector(".heading5").style.display = 'block';
+     }
+   });
+ </script>
 </body>
 </html>
