@@ -1,4 +1,3 @@
-if(location.hostname.includes("ezoradom.js.org")){
   document.addEventListener("DOMContentLoaded",()=>{
      let nav = document.querySelector('nav');
      nav.innerText = '☰';
@@ -10,4 +9,3 @@ if(location.hostname.includes("ezoradom.js.org")){
      nav.style.zIndex = '5';
      nav.onclick = () => location.href='/menu';
     });
-}
