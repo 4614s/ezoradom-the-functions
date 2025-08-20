@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <script src="https://cdn.jsdelivr.net/gh/4614s/ezoradom-the-functions@main/CDN/v1.1.fast.js"></script>
+<script src="https://ezora.pages.dev/unavaible-files/footer.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="nav.js"></script>
+  <title>Sayım sayaçları</title>
+</head>
+<body>
+  <nav></nav>
+  <br><br>
+  <h2>EzoraDOM Dökümantasyonu - Asetler: Sayım Sayaçları</h2>
+  <h3>Geri sayım sayacı</h3>
+  <p>
+    Sayım bitince girdiğiniz fonksiyonu çalıştırır ve sayımı görmeniz için element oluşturur.
+  </p>
+  <div class="code">
+    <span class="lightblue">ez</span>.createCountdownTimer(<span class="lightgreen">Süre (saniye)</span>,  <span class="blue">Fonksiyon</span>, <span class="orange">Element Id</span>, <span class="orange">Element Class ismi</span>, <span class="orange">Element Konumu</span>);
+  </div>
+  <p>
+    İlk parametre belirlenen süredir. O süre bitince ikince parametredeki fonksiyon çalışır. <br>
+    <br>
+    3, 4, 5. parametre oluşturulan sayım elementine aittir. Unutmayın element oluşturulduğu için id ile classname boş kalamaz.
+  </p>
+  <br>
+  <h3>İleri sayım sayacı</h3>
+  <div class="code">
+    <span class="lightblue">ez</span>.createCountUpTimer(<span class="lightgreen">Süre (saniye)</span>,  <span class="blue">Fonksiyon</span>, <span class="orange">Element Id</span>, <span class="orange">Element Class ismi</span>, <span class="orange">Element Konumu</span>);
+  </div>
+  <p>
+    Geri sayım sayacı ile neredeyse aynıdır. Ama tek farkı geriye değil ileriye sayar.
+  </p>
+  <br>
+  <br>
+  <h3>Örnek kod:</h3>
+  <div class="code">
+    <span class="lightblue">ez</span>.createCountdownTimer(<span class="lightgreen">5</span>, () <span class="blue">=></span> { <br>
+     alert(<span class="orange">"5 saniye geçti"</span>); <br>
+    }, <span class="lightgreen">0</span>, <span class="lightgreen">0</span>, <span class="orange">"#alan"</span>);
+  </div>
+  <br>
+  <button onclick="ez.createCountdownTimer(5,()=>{alert('5 saniye geçti')},0,0,'#alan')">Kodu çalıştır</button>
+  <div id="alan" style="border: 2px solid gray; padding: 4px;margin: 4px">
+    #alan <br>
+  </div>
+  <br>
+  <footer class="ezs-footer"></footer>
+ </body>
+</html>
