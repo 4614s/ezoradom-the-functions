@@ -1,118 +1,85 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <script src="CDN/v1.js"></script>
-  <script src="docs/nav.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/4614s/ezoradom-the-functions@main/CDN/v1.1.fast.js"></script>
+  <script src="https://ezoradom.js.org/docs/nav.js"></script>
   <script src="https://ezora.pages.dev/unavaible-files/cdntags.js"></script>
   <script src="https://ezora.pages.dev/unavaible-files/footer.js"></script>
-  <link rel="preload" href="photos/ezoradomlogo1.jpg" as="image">
+  <link rel="icon" href="https://ezoradom.js.org/photos/ezoradomsquarelogo.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="preload" as="image" href="https://ezoradom.js.org/photos/ezoradomlogo1.jpg">
+  <link rel="preload" as="image" href="https://ezoradom.js.org/photos/ezoradomsquarelogo.jpg">
+  <link rel="stylesheet" href="css/index.css">
+  <title>Fonksiyonlar ile HTML sayfanıza hükmedin!</title>
  </head>
  <body>
- <script> 
-  //Head
-  ez.pageCharset('UTF-8');
-  ez.pageFavicon('photos/ezoradomsquarelogo.jpg');
-  ez.createMetaElement('viewport','width=device-width, initial-scale=1.0');
-  ez.createMetaElement('description',`
-   EzoraDOM the functions: Fonksiyonlar ile DOM kodları ve daha fazlasını yazmanızı sağlayan bir Javascript kütüphanesidir. 
-  `);
-  ez.pageTitle('EzoraDOM: Fonksiyonlar ile HTML sayfanıza hükmedin!');
+  <header>
+   <nav></nav>
+   <br><br>
+  </header>
+
+  <main>
+    <section class="hero">
+  <img src="https://ezoradom.js.org/photos/ezoradomlogo1.jpg" alt="EzoraDOM logo1" id="logo1" />
+   <div id="container1">
+     <img src="https://ezoradom.js.org/photos/ezoradomsquarelogo.jpg" alt="EzoraDOM Logo 2"/>
+     <h2 class="text-center">Fonksiyonlar ile HTML sayfanıza hükmedin!</h2>
+   </div>
+  <p class="text-center">
+    EzoraDOM The Functions, fonksiyonlar ile DOM (Document Object Model) kodları ve daha fazlasını yazmanızı sağlayan minimal ama güçlü, açık kaynak bir Javascript kütüphanesidir. Kısaca "EzoraDOM" denmektedir.
+  </p>
+</section>
  
-  //Body
-  ez.createElement("nav",0,0,0);
-  ez.createElement("br",0,0,0);
-  ez.createElement("br",0,0,0);
-  ez.createElement('div',`
-   <img src="photos/ezoradomlogo1.jpg" alt="EzoraDOM logo" id="logo1">
-  `,'div1',0);
-  ez.createElement('h2',`Fonksiyonlar ile HTML sayfanıza hükmedin!`,0,'text-center');
-  ez.createElement('p',`EzoraDOM fonksiyonlar ile DOM (Document object model) kodları ve daha fazlasını yazmanızı sağlayan bir Javascript kütüphanesidir. Kütüphanenin tam ismi EzoraDOM the functions'dır. <br>
-   <br>
-   <b>EzoraDOM ile:</b>
-   <ul style="text-align: left;list-style: none;">
-    <li>Sayfadaki bir yazının içeriği değiştirilebilir.</li>
-    <li>Sayfadaki bir bölümün html içeriği değiştirilebilir.</li>
-    <li>Element oluşturulabilir.</li>
-    <li>Sayfadaki element silinebilir.</li>
-    <li>Sayfadaki istenilen bir elemente event atanabilir.</li>
-    <li>Sayfadaki istenilen elementin eventı silinebilir.</li>
-    <li>Sayfadaki istenilen elemente/elementlere stil atanabilir</li>
-    <li>Veri depolanabilir/silinebilir/okunabilir (Lokal)</li>
-    <li>Sayfa başlığı, sayfa karakter seti gibi head içeriklerinede girilebilir.</li>
-    <li>Meta Element oluşturulabilir.</li>
-    <li>EzoraDOM asetler ile tek satırda güçlü uygulamalar oluşturulabilir. Örnek ez.createLiveClock(4,0,0); 40px boyutunda canlı saat oluşturur. </li>
-   </ul>`,0,'text-center');
-   ez.createElement('div',`<b>Bu sayfa EzoraDOM ile yazılmıştır. Bakmak isterseniz =></b> <a href="https://github.com/4614s/ezoradom-the-functions/tree/main/index.html" style="color:lightblue;">github.com/4614s/EzoraDOM-the-functions/index.html?code=inspect</a>`,'link1','text-center');
-   ez.createElement('h2',`EzoraDOM'u sayfaya dahil etme`,0,'text-center');
-   ez.createElement('p',`i.js dinamiktir. EzoraDOM güncellendiğinde oda güncellenir. Kod aşağıda kopyalamak için koda tıklayın.`,0,'text-center');
-   ez.createButton(cdnIjs,`
-   navigator.clipboard.writeText(cdnIjs)
-  .then(() => {
-    alert("Kopyalandı!");
-  })
-  .catch(err => {
-    alert("Kopyalanamadı");
-   });
-   `,0,'code');
- 
-  ez.createElement("div",`<a href="/docs/cdn"
-  style="display:flex;justify-content: center;"
-  >Daha fazla bilgi için tıkla</a>
-  `,0,0);
-  ez.createElement('footer',0,0,'ezs-footer');
-   
-  //Styles 
-  ez.setStyleByTagName("body",'background','#1B0E3D');
-  ez.setStyleByTagName("body",'color','white');
-  ez.setStyleByTagName('body','fontFamily','sans-serif');
-  ez.setStyleById('logo1','width','360px');
-  ez.setStyleById('logo1','filter','brightness(0.93)');
-  ez.setStyleById('logo1','height','200px'); 
-  ez.setStyleById('div1','display','flex'); 
-  ez.setStyleById('div1','justifyContent','center');
-  ez.setStyleByClassName('text-center','textAlign','center','all');
-
-  ez.setStyleByTagName('h2','font-size','1.8rem','f');
-  ez.setStyleByTagName('li','margin-block','8px','all');
-  ez.setStyleByTagName('footer','padding','20px');
-  ez.createElement('style',`
- /*
-   Vanilla CSS ama EzoraDOM içinde :)
- */
-   ::selection {
-     background: darkblue;
-     color: white;
-   }
-   
-   li::before {
-     content: "– ";
-   }
-   
-   .code {
-     background: #333;
-     color: green;
-     margin: 0 auto;
-     padding: 12px;
-     border-radius: 5px;
-     display: block;
-     max-width: 90vw;
-     border: 1px solid black;
-     word-break: break-word;
-     overflow-wrap: break-word;
-     cursor: pointer;
-     margin-bottom: 32px;
-     font-weight: 600;
-   }
-
-   a { color: lightblue; }
- `,0,0,'head');
-
+<section class="why">
+  <br>
+  <h3>Neden EzoraDOM The Functions?</h3>
+   <ul>
+     <li><i class="fa-solid fa-bolt"></i> <b>Hafif ve hızlı</b> — Sadece birkaç kb boyutunda, gereksiz yük bindirmez.</li>
+     <li><i class="fa-solid fa-wand-magic-sparkles"></i> <b>Kolay kullanım</b> — Basit fonksiyonlarla DOM üzerinde anında işlem yap.</li>
+     <li><i class="fa-solid fa-cube"></i> <b>Minimal ama güçlü</b> — İhtiyacın olduğu temel özelliklere odaklanır.</li>
+     <li><i class="fa-solid fa-cloud-arrow-down"></i> <b>CDN ile anında dahil et</b> — Tek satır kodla hemen kullanmaya başla</li>
+     <li><i class="fa-solid fa-code-branch"></i> <b>Açık kaynak</b> — Özgürce inceleyebilir, katkıda bulunabilirsin</li>
+     <li><i class="fa-solid fa-circle-check"></i> <b>Çatışmaz</b> – Hiçbir varsayılan ayarı yoktur. Diğer kütüphaneler veya frameworklerle birlikte sorunsuzca kullanılabilir.</li>
+   </ul>
+</section> 
   
-  /*
-   Copyright ©2025 EzoraDOM the functions – Tüm Hakları Saklıdır. Ezora'ya aittir. Başka bir isim altında kopyalanmadığı sürece özgürce kullanılabilir. 
-  */
+<section class="features">
+  <h3>EzoraDOM Temel Özellikleri</h3>
+  <ul>
+    <li><i class="fa-solid fa-pen"></i> Sayfadaki bir yazının içeriği değiştirilebilir.</li>
+    <li><i class="fa-solid fa-code"></i> Sayfadaki bir bölümün html içeriği değiştirilebilir.</li>
+    <li><i class="fa-solid fa-square-plus"></i> Element oluşturulabilir.</li>
+    <li><i class="fa-solid fa-trash"></i> Sayfadaki element silinebilir.</li>
+    <li><i class="fa-solid fa-bolt"></i> Sayfadaki istenilen bir elemente olay atanabilir.</li>
+    <li><i class="fa-solid fa-ban"></i> Sayfadaki istenilen elementin olayı silinebilir.</li>
+    <li><i class="fa-solid fa-paintbrush"></i> Sayfadaki istenilen elemente/elementlere stil atanabilir.</li>
+    <li><i class="fa-solid fa-database"></i> Veri depolanabilir / silinebilir / okunabilir (Lokal).</li>
+    <li><i class="fa-solid fa-file-lines"></i> Sayfa başlığı, karakter seti gibi head içeriklerine girilebilir.</li>
+    <li><i class="fa-solid fa-tools"></i> EzoraDOM asetler ile tek satırda güçlü uygulamalar oluşturulabilir.</li>
+    <li><i class="fa-solid fa-link"></i> Dosya bağlanabilir (CSS / JS).</li>
+  </ul>
+</section>
 
-  
-  </script>
+<section class="include">
+  <br>
+  <h3>EzoraDOM'u sayfaya CDN ile dahil etme</h3>
+  <a href="docs/cdn">Bilgi almak ve CDN kodunu görmek için buraya tıklayın</a>
+</section>
+
+<section class="sociallinks">
+  <br>
+  <h3><i class="fa-solid fa-link"></i>Bağlantılar</h3>
+  <ul>
+    <li id="githublink" onclick="location.href='https://github.com/4614s/ezoradom-the-functions'">
+        <i class="fa-brands fa-github"></i>Github Deposu
+    </li>
+    <li id="maillink" onclick="location.href='mailto:ezoraweb@gmail.com'">
+        <i class="fa-regular fa-envelope"></i>Email Adresi
+    </li>
+  </ul>
+</section>
+  </main>
+
+  <footer class="ezs-footer"></footer>
  </body>
 </html>
