@@ -1,0 +1,141 @@
+::selection {
+  background: darkblue;
+  color: white;
+}
+
+body {
+  background: #1B0E3D;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#logo1 {
+  width: clamp(350px,60vw,800px);
+  height: auto;
+  filter: brightness(0.93);
+  display: block;
+  margin: 0 auto;
+  max-width: 98vw;
+}
+
+#container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(3px,1vw,20px);
+}
+
+#container1 > img {
+  display: none;
+  filter: brightness(0.92);
+}
+
+.text-center {
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+i {
+  margin-inline: 3px;
+}
+
+footer {
+  padding: 20px;
+}
+
+a {
+  color: lightblue;
+}
+
+section {
+  padding: 1vw 5vw;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ li {
+  margin: 1.6rem 2vw;
+  font-size: 1.1rem;
+  background: #000060;
+  text-align: left;
+  padding: 0.9rem 0.55rem;
+  border-radius: 0.3rem;
+}
+
+i {
+  color: lightblue;
+  margin-right: 8px;
+}
+
+#githublink {
+  background: black;
+  color: white;
+}
+
+#maillink {
+  background: green;
+}
+
+#maillink:hover {
+  background: darkgreen;
+}
+
+.hero {
+  padding: 0 !important;
+}
+
+.hero > p {
+  margin: 0 0.7rem;
+}
+
+.sociallinks > ul > li > i{
+  color: white;
+}
+
+.sociallinks > ul > li {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.sociallinks > ul > li:hover {
+  text-decoration: underline;
+}
+
+.sociallinks > ul > li:active {
+  transform: scale(0.95);
+}
+
+@media (min-width: 640px) {
+  .sociallinks > ul {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .sociallinks > ul > li {
+    width: 100%;
+  }
+  
+  #logo1 {
+    display: none;
+  }
+  
+  #container1 > img {
+    display: block;
+  }
+  
+  li {
+   padding-block: 1.4rem; 
+  }
+}
