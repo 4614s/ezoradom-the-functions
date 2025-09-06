@@ -8,6 +8,15 @@
   <link rel="stylesheet" href="style.css">
   <script>
     ez.createElement("style",`
+    body {
+     margin: 0;
+     margin-block: 16px;
+    }
+    
+    h2, p{
+     margin: 0.75rem;
+    }
+    
     .code {
      background: #333;
      color: green;
@@ -21,12 +30,9 @@
      cursor: pointer;
      font-weight: 600;
      text-align: center;
-     margin: 0 auto;
-    }
-
-    p, b {
-     margin-block: 40px;
-    }`,0,0,'head');
+     margin: 0;
+    }     
+    `,0,0,'head');
     ez.createMetaElement("viewport","width=device-width, initial-scale=1.0");
     ez.pageCharset("UTF-8");
     ez.pageTitle("EzoraDOM dokümantasyonu: 0- CDN ");
