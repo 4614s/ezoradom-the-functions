@@ -1,30 +1,10 @@
-<h1 align="center">Fonksiyonlar ile HTML sayfanıza hükmedin!</h1>
-<p align="center">
- EzoraDOM fonksiyonlar ile DOM (Document object model) kodları ve daha fazlasını yazmanızı sağlayan bir Javascript kütüphanesidir. Kütüphanenin tam ismi EzoraDOM the functions'dır.
-</p>
-<p align="center">EzoraDOM ile</p>
-<ul>
-  <li>Sayfadaki bir yazının içeriği değiştirilebilir.</li>
-  <li>Sayfadaki bir bölümün html içeriği değiştirilebilir.</li>
-  <li>Element oluşturulabilir.</li>
-  <li>Sayfadaki element silinebilir.</li>
-  <li>Sayfadaki istenilen bir elemente event atanabilir.</li>
-  <li>Sayfadaki istenilen elementin eventı silinebilir.</li>
-  <li>Sayfadaki istenilen elemente/elementlere stil atanabilir.</li>
-  <li>Veri depolanabilir/silinebilir/okunabilir (Lokal)</li>
-  <li>Sayfa başlığı, sayfa karakter seti gibi head içeriklerinede girilebilir.</li>
-  <li>Meta Element oluşturulabilir.</li>
-  <li>EzoraDOM asetler ile tek satırda güçlü uygulamalar oluşturulabilir. Örnek ez.createLiveClock(4,0,0); 40px boyutunda canlı saat oluşturur.</li>
-</ul>
+# EzoraDOM The Functions OOV
+**OOV** Object-oriented version anlamına gelmektedir. EzoraDOM'un OOP kullanılarak yazılan halidir. Aslında kullanımı nereseyse aynı ama bazı farklılıklar vardır. OOV normal sürümlere göre daha güvenlidir.
 
+Kullanmadan önce kodunuzun başında şu bulunmalıdır
+```javascript
+const ez = new EzoraDOMTFApp();
+```
+Biliyoruz **"ez"** yazan kısım değiştirilebilir. Çünkü normal sürümlerde tüm EzoraDOM fonksiyonları **"ez"** objesi içindedir. Dokümanmantasyonda ise ez kullanılmasının sebebi de bu. İşte OOV'nin avantajı burda başlıyor büyük bir projede ez isimli bir obje kullanan bir kütüphane/çerçeve kullanılıyor ise **"ez"** yerine başka bir şey yazın.
 
-
-<p align="center">Copyright ©2025 EzoraDOM the functions – Tüm Hakları Saklıdır. Ezora'ya aittir. 
- Başka bir isim altında kopyalanmadığı sürece özgürce kullanılabilir.
-
-
- 
-</p>
-<p align="center"> 
- <a href="https://github.com/4614s/Ezora/tree/main/LICENSE.md">Lisans: Ezora Halk Lisansı v1</a>
-</p>
+Copyright ©2025 EzoraDOM The Functions 
