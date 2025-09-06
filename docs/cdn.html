@@ -43,24 +43,30 @@
     EzoraDOM CDN üzerinden dahil edilir. Aşağıdan bir tane CDN scripti seçin ve kopyaladığınız kodu head etiketinin içerisine koyun. Korkmayın hata vermez.
   </p>
  
-  <b>Bilgilendirme: Sonu .fast.js ile biten dosyalar. Minify edilmiş dosyalardır. Yani çok daha hızlıdır.</b>
+  <b>Kafanızı karıştırmak istemiyoruz ama haklısınız 9 tane cdn kodundan hangisini kullanayayım diye şaşırabilir insan. <br>
+  Kısaca dosya adı {sürüm}o.js olanlar sıkıştırılmış OOV dosyalardır {sürüm}o.inspect.js olanlar ise incelemeye açık sıkıştırılmamış OOV dosyalardır. İsmi direkt {sürüm}.js olanlar ise OOV olmayan sıkıştırılmamış normal dosyalardır. Dosya adı {sürüm}.fast.js olanlar sıkıştırılmış OOV olmayan normal dosyalardır.</b>
   <p>
-    i.js dinamiktir. EzoraDOM güncellendiğinde oda güncellenir. Kod aşağıda kopyalamak için koda tıklayın.
+    i.js dinamiktir. EzoraDOM güncellendiğinde oda güncellenir.
   </p>
   <button class="code" onclick="copyCode(cdnTagezoradomIjs)" id="iJsCode"></button>
   <br>
   </br>
   <p>
-   v1.1 sürümü en güncel EzoraDOM sürümüdür. Kod aşağıda kopyalamak için koda tıklayın.
+   v1.1
   </p>
   <button class="code" onclick="copyCode(cdnTagezoradomv11js)"></button> 
   <button class="code" onclick="copyCode(cdnTagezoradomv11fastjs)"></button>
+  <button class="code" onclick="copyCode(cdnTagezoradomOov11inspectjs)"></button>
+  <button class="code" onclick="copyCode(cdnTagezoradomOov11js)"></button>
   <br></br>  
   <p>
-    v1 sürümü artık en günceli değil. Kod aşağıda kopyalamak için koda tıklayın.
+    v1
   </p>
   <button class="code" onclick="copyCode(cdnTagezoradomV1js)"></button> 
   <button class="code" onclick="copyCode(cdnTagezoradomV1fastjs)"></button>
+  <button class="code" onclick="copyCode(cdnTagezoradomOov1inspectjs)"></button>
+  <button class="code" onclick="copyCode(cdnTagezoradomOov1js)"></button>
+  
   <script>
    let btns = document.querySelectorAll(".code");
    
@@ -77,10 +83,12 @@
    btns[0].textContent = cdnTagezoradomIjs;
    btns[1].textContent = cdnTagezoradomv11js;
    btns[2].textContent = cdnTagezoradomv11fastjs;
-   btns[3].textContent = cdnTagezoradomV1js;
-   btns[4].textContent = cdnTagezoradomV1fastjs;   
-   
-  
+   btns[3].textContent = cdnTagezoradomOov11inspectjs;
+   btns[4].textContent = cdnTagezoradomOov11js;   
+   btns[5].textContent = cdnTagezoradomV1js;   
+   btns[6].textContent = cdnTagezoradomV1fastjs;   
+   btns[7].textContent = cdnTagezoradomOov1inspectjs;   
+   btns[8].textContent = cdnTagezoradomOov1js;      
   </script>
   <br>
   <footer class="ezs-footer"></footer>
